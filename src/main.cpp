@@ -1,7 +1,9 @@
 #include "Queue.h"
+#include "Menu.h"
 
 int main() {
-    Queue<int> q;
+	Queue<int> q;
+	menu(q);
 
-    return 0;
+	return 0;
 }

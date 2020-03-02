@@ -350,3 +350,6 @@ MigrationBackup/
 .ionide/
 /out/build/x64-Debug
 /out
+/build/
+/.cproject
+/.project

@@ -25,11 +25,19 @@ public:
 	}
 
 	typedef Node<T>* Iterator;
-	Iterator front() {
+	Iterator front() const {
 		return m_front;
 	}
-	Iterator back() {
+	Iterator back() const {
 		return m_back;
+	}
+	T getValue(const Iterator& iter) const {
+		if (iter) return iter->value;
+		return std::numeric_limits<int>::min();
+	}
+	Iterator getNext(const Iterator& iter) const {
+		if (iter) return iter->next;
+		return nullptr;
 	}
 
 	void push(const T& data) {
